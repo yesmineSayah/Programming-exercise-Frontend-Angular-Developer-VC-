@@ -1,0 +1,55 @@
+<div class="title">
+  <h2>Add Operator</h2>
+  <p>Please Fill the from if you want to add a new operator or new prefix </p>
+</div>
+
+<div class="card">
+  <div class="card-block">
+    <div class="container">
+<form (ngSubmit)="saveOperator()">
+      <div class="form-group row">
+        <label class="col-md-2 col-sm-12 col-form-label">Operator
+          <span>*</span>
+        </label>
+        <div class="col-md-10 col-sm-12">
+
+            <select class="form-control" [(ngModel)]="price.operator" type="text" name="operator"
+            (ngModelChange)="onChange($event)" *ngIf="!valid">
+                <option type="text" value="new operator">new operator</option>
+
+                <option type="text" value="{{operator}}" *ngFor="let operator of getOperators()">{{operator}}</option>
+              </select>
+
+              <input class="form-control" type="text" name="operator" [(ngModel)]="price.operator" *ngIf="valid" required>
+              
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label class="col-md-2 col-sm-12 col-form-label">Prefix
+          <span>*</span>
+        </label>
+        <div class="col-md-10 col-sm-12">
+          <input class="form-control" type="Number" name="prefix" [(ngModel)]="price.prefix" required>
+        </div>
+      </div>
+
+
+
+      <div class="form-group row ">
+        <label class="col-md-2 col-sm-12 col-form-label">Price / mn
+          <span>*</span>
+        </label>
+        <div class="col-md-10 col-sm-12">
+          <input class="form-control" type="Number" name="price" [(ngModel)]="price.pricemn" required>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-primary btn-md">submit</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-block{
+    margin-top: 20px;
+    
+}
+span{
+    color : red;
+}
+
+label{
+    font-weight: bold;
+}
+
+button{
+    margin: 5% 45%;
+}
+
